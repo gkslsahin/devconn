@@ -10,6 +10,9 @@ const PORT = process.env.PORT || 5000
 //connec to Database
 connectDB()
 
+//Init Middleware
+app.use(express.json({ extended: false}))
+
 app.get("/", (req,res)=> res.send("api runnig"))
 
 
